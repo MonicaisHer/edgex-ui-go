@@ -12,8 +12,8 @@ draft
 #### Install edgex-ui snap and edgexfoundry snap:
 
 ```
-$ sudo snap remove --purge edgexfoundry
-$ sudo snap install edgexfoundry --channel=2.0
+$ snap remove --purge edgexfoundry
+$ snap install edgexfoundry --channel=2.0
 $ snap install edgex-ui --edge
 ```
 
@@ -30,22 +30,22 @@ we should see:
 ```
 Service                                    Startup   Current   Notes
 edgex-ui.edgex-ui                          enabled   active    -
-edgexfoundry.app-service-configurable      enabled   active    -
+edgexfoundry.app-service-configurable      disabled  inactive  -
 edgexfoundry.consul                        enabled   active    -
 edgexfoundry.core-command                  enabled   active    -
 edgexfoundry.core-data                     enabled   active    -
 edgexfoundry.core-metadata                 enabled   active    -
-edgexfoundry.device-virtual                enabled   active    -
+edgexfoundry.device-virtual                disabled  inactive  -
 edgexfoundry.kong-daemon                   enabled   active    -
-edgexfoundry.kuiper                        enabled   active    -
+edgexfoundry.kuiper                        disabled  inactive  -
 edgexfoundry.postgres                      enabled   active    -
 edgexfoundry.redis                         enabled   active    -
 edgexfoundry.security-bootstrapper-redis   enabled   inactive  -
 edgexfoundry.security-consul-bootstrapper  enabled   inactive  -
 edgexfoundry.security-proxy-setup          enabled   inactive  -
 edgexfoundry.security-secretstore-setup    enabled   inactive  -
-edgexfoundry.support-notifications         enabled   active    -
-edgexfoundry.support-scheduler             enabled   active    -
+edgexfoundry.support-notifications         disabled  inactive  -
+edgexfoundry.support-scheduler             disabled  inactive  -
 edgexfoundry.sys-mgmt-agent                disabled  inactive  -
 edgexfoundry.vault                         enabled   active    -
 ```
@@ -71,8 +71,8 @@ $ snap set edgexfoundry kuiper=on
 Enable Scheduler, to use Interval and interval actions for cleaning up Redis database periodically:
 
 ```
-$ sudo snap set edgexfoundry support-scheduler=on 
-$ sudo snap set edgexfoundry support-notifications=on 
+$ snap set edgexfoundry support-scheduler=on 
+$ snap set edgexfoundry support-notifications=on 
 ```
 
 #### Start System Management Agent service:
@@ -80,7 +80,7 @@ $ sudo snap set edgexfoundry support-notifications=on
 Enable system management agent service for communication between SMA and core data, to use ‘system services monitor’ for system health check, metric check, configuration and operation:
 
 ```
-$ sudo snap set edgexfoundry sys-mgmt-agent=on
+$ snap set edgexfoundry sys-mgmt-agent=on
 ```
 
 #### Use edgex-ui:
