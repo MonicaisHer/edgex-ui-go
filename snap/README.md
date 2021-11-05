@@ -46,7 +46,7 @@ $ sudo snap install edgex-ui --edge
 **Note** - the snap has only been tested on Ubuntu Desktop
 
 ### Install and configure dependencies
-EdgeX UI depends several other edgexfoundry services. 
+EdgeX UI depends on several other edgexfoundry services. 
 
 Please refer to [edgexfoundry Snap](https://github.com/edgexfoundry/edgex-go/blob/main/snap/README.md) for installation of the snapped version.
 
@@ -76,7 +76,7 @@ edgexfoundry.sys-mgmt-agent                disabled  inactive  -
 edgexfoundry.vault                         enabled   active    -
 ```
 
-Some dependency services don't start by default. We need to start them if not already active.
+Some dependency services don't start by default. We need to start them if they are not already active.
 
 Enable scheduler and notifications to avoid runtime errors (see issue [#TBA](link to issue reporting that tracks this bug)):
 
