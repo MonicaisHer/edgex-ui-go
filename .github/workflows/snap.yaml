@@ -30,4 +30,3 @@ jobs:
           name: ui
           snap: ${{needs.build.outputs.snap}}
 
-          
